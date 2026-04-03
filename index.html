@@ -72,7 +72,7 @@
 <body>
   <div class="login-container">
     <h2>Login Futurístico</h2>
-    <form action="/login" method="post">
+    <form id="loginForm">
       <label for="username">Usuário</label>
       <input type="text" id="username" name="username" required>
 
@@ -82,6 +82,21 @@
       <button type="submit">Entrar</button>
     </form>
   </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // evita recarregar a página
+
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if (user === 'admin' && pass === 'admin') {
+        alert('Bem-vindo, admin!');
+      } else {
+        alert('Usuário ou senha incorretos!');
+      }
+    });
+  </script>
 </body>
 </html>
-
