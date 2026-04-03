@@ -2,19 +2,86 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Login Futurístico</title>
+  <style>
+    body {
+      background-color: #000; /* fundo preto */
+      color: #fff; /* texto branco */
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #111;
+      padding: 40px;
+      border: 2px solid #FFD700; /* amarelo dourado */
+      border-radius: 10px;
+      box-shadow: 0 0 20px #FFD700;
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      color: #FFD700;
+      margin-bottom: 20px;
+    }
+
+    .login-container label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #fff;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-bottom: 2px solid #FFD700;
+      background: transparent;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .login-container input:focus {
+      outline: none;
+      border-bottom: 2px solid #fff;
+    }
+
+    .login-container button {
+      background-color: #FFD700;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-container button:hover {
+      background-color: #fff;
+      color: #000;
+      box-shadow: 0 0 10px #FFD700;
+    }
+  </style>
 </head>
 <body>
-  <h2>Formulário de Login</h2>
-  <form action="/login" method="post">
-    <label for="username">Usuário:</label>
-    <input type="text" id="username" name="username" required>
-    <br><br>
-    <label for="password">Senha:</label>
-    <input type="password" id="password" name="password" required>
-    <br><br>
-    <button type="submit">Entrar</button>
-  </form>
+  <div class="login-container">
+    <h2>Login Futurístico</h2>
+    <form action="/login" method="post">
+      <label for="username">Usuário</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
 </body>
 </html>
 
