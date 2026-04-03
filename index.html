@@ -91,8 +91,9 @@
       const user = document.getElementById('username').value;
       const pass = document.getElementById('password').value;
 
-      if (user === 'admin' && pass === 'admin') {
+      if (user === 'admin' && pass === 'password') {
         alert('Bem-vindo, Hunter admin!');
+        window.location.href = "https://thiagosmith.github.io/login/";
       } else {
         alert('Usuário ou senha incorretos!');
       }
